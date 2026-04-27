@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -903,4 +903,892 @@ footer h2 {
   .hero h1 {
     font-size: 44px;
   }
+} */
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fff;
+  color: #101828;
+}
+
+.page {
+  max-width: 1440px;
+  margin: auto;
+  background: #fff;
+  overflow: hidden;
+}
+
+.topHeader {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 230px;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 32px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.bataLogo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  animation: slideLeft 0.8s ease both;
+}
+
+.shoeMark {
+  font-size: 54px;
+  background: linear-gradient(135deg, #ef4444, #06b6d4, #facc15);
+  width: 110px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  transform: rotate(-2deg);
+}
+
+.bataLogo h1 {
+  font-size: 42px;
+  line-height: 0.8;
+  color: #e11d1d;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.bataLogo p {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.bataLogo small {
+  letter-spacing: 5px;
+  color: #475467;
+}
+
+.partnerLogos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  animation: slideDown 0.8s ease both;
+}
+
+.miniLogo,
+.streeLogo {
+  width: 82px;
+  height: 82px;
+  border: 4px solid #d1d5db;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: 900;
+  font-size: 13px;
+  color: #e91e63;
+  background: #fff;
+}
+
+.streeLogo {
+  color: #0ea5e9;
+  border-color: #38bdf8;
+  font-size: 20px;
+}
+
+.streeLogo span {
+  font-size: 12px;
+  color: #e91e63;
+}
+
+.partnerLogos p {
+  font-size: 13px;
+  color: #475467;
+}
+
+.partnerLogos b {
+  color: #e91e63;
+}
+
+.languageBox {
+  animation: slideRight 0.8s ease both;
+}
+
+.languageBox label {
+  font-size: 13px;
+  color: #475467;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.languageBox select {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: white;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border-bottom: 1px solid #e5e7eb;
+  overflow-x: auto;
+  background: white;
+}
+
+.nav a {
+  padding: 18px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  border-bottom: 4px solid transparent;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.nav a:first-child {
+  color: #e91e63;
+  border-bottom-color: #e91e63;
+}
+
+.nav a:hover {
+  color: #e91e63;
+  transform: translateY(-3px);
+  background: #fff1f7;
+}
+
+.hero {
+  min-height: 360px;
+  display: grid;
+  grid-template-columns: 44% 56%;
+  align-items: center;
+  background: linear-gradient(90deg, #fff1f7 0%, #fff 45%, #fdf2f8 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(1px);
+  opacity: 0.45;
+  animation: floatBubble 6s ease-in-out infinite;
+}
+
+.hero::before {
+  width: 90px;
+  height: 90px;
+  background: #f472b6;
+  left: 3%;
+  top: 35%;
+}
+
+.hero::after {
+  width: 130px;
+  height: 130px;
+  background: #38bdf8;
+  right: 6%;
+  bottom: 12%;
+  animation-delay: 1.5s;
+}
+
+.heroText {
+  padding: 40px 70px;
+  position: relative;
+  z-index: 2;
+  animation: slideLeft 0.9s ease both;
+}
+
+.heroText::before {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  background: #f9a8d4;
+  opacity: 0.35;
+  border-radius: 40% 60% 60% 40%;
+  right: 10px;
+  top: 20px;
+  animation: float 5s ease-in-out infinite;
+}
+
+.heroText h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 60px;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  color: #000;
+}
+
+.heroText span {
+  color: #e91e63;
+  font-size: 76px;
+}
+
+.heroText b {
+  color: #005aa9;
+  font-size: 74px;
+}
+
+.heroText p {
+  margin: 18px 0 10px;
+  font-size: 21px;
+}
+
+.pill {
+  width: fit-content;
+  padding: 8px 18px;
+  border-radius: 999px;
+  color: white;
+  margin: 8px 0;
+  font-weight: 800;
+  font-size: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.pink {
+  background: #e91e63;
+}
+
+.blue {
+  background: #005aa9;
+}
+
+.hero img {
+  height: 360px;
+  width: 100%;
+  object-fit: cover;
+  animation: heroFloat 4s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.awareness {
+  padding: 28px 22px 12px;
+}
+
+.title {
+  text-align: center;
+  color: #0b3a75;
+  font-size: 28px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.title::before,
+.title::after {
+  content: "";
+  display: inline-block;
+  width: 44px;
+  height: 3px;
+  background: #e91e63;
+  margin: 0 14px 8px;
+}
+
+.topicGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 28px;
+  margin-bottom: 26px;
+}
+
+.topicCard {
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #f0c7d9;
+  border-radius: 16px;
+  padding: 10px 10px 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  transition: 0.35s ease;
+  animation: fadeUp 0.8s ease both;
+}
+
+.topicCard:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.topicCard:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.topicCard:nth-child(4) {
+  animation-delay: 0.36s;
+}
+
+.topicCard:nth-child(5) {
+  animation-delay: 0.48s;
+}
+
+.topicCard:hover {
+  transform: translateY(-12px) scale(1.025);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.16);
+}
+
+.topicIcon {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 20px #0002;
+}
+
+.topicCard img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.topicCard h3 {
+  margin-top: 12px;
+  font-size: 17px;
+  line-height: 1.15;
+}
+
+.ageGrid {
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 260px;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.ageGrid > img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: 0.35s ease;
+}
+
+.ageGrid > img:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
+}
+
+.softCard {
+  border-radius: 18px;
+  padding: 24px 28px;
+  background: #fff;
+  animation: fadeUp 0.8s ease both;
+}
+
+.softCard.green {
+  background: linear-gradient(120deg, #f0fff4, #ffffff);
+}
+
+.softCard.pink {
+  background: linear-gradient(120deg, #fff0f7, #ffffff);
+}
+
+.softCard h3 {
+  font-size: 24px;
+  color: #009b63;
+  margin-bottom: 10px;
+}
+
+.softCard.pink h3 {
+  color: #e91e63;
+}
+
+.softCard li,
+.infoCard li,
+.terms li {
+  list-style: none;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.softCard li::before,
+.infoCard li::before,
+.terms li::before {
+  content: "✹";
+  color: #009b63;
+  margin-right: 8px;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 53% 47%;
+  gap: 28px;
+  padding: 6px 22px 28px;
+}
+
+.blueTitle {
+  text-align: center;
+  color: #0b3a75;
+  font-size: 27px;
+  margin: 10px 0 4px;
+}
+
+.leftCol > p {
+  text-align: center;
+  color: #184c8f;
+  margin-bottom: 18px;
+}
+
+.cards3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.infoCard {
+  border: 1px solid #d7eadb;
+  border-radius: 14px;
+  padding: 12px;
+  background: linear-gradient(180deg, #fff, #fbfffc);
+  min-height: 260px;
+  transition: 0.3s ease;
+  animation: fadeUp 0.8s ease both;
+}
+
+.infoCard:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.infoCard:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.infoCard:hover {
+  transform: translateY(-12px) scale(1.025);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.16);
+}
+
+.infoCard img {
+  width: 100%;
+  height: 118px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  transition: 0.35s ease;
+}
+
+.infoCard:hover img {
+  transform: scale(1.04);
+}
+
+.infoCard h3 {
+  color: #008855;
+  font-size: 17px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.healthGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.voucherBox {
+  background: #fff6f8;
+  border-radius: 16px;
+  padding: 28px;
+  height: 100%;
+  animation: fadeUp 0.8s ease both;
+}
+
+.voucherBox h2 {
+  text-align: center;
+  color: #0b3a75;
+}
+
+.voucherBox h2 span {
+  color: #e11d1d;
+  font-style: italic;
+}
+
+.voucherBox h3 {
+  text-align: center;
+  color: #e91e63;
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+.voucherGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.voucher {
+  min-height: 110px;
+  border: 2px solid #f5b7c8;
+  border-radius: 10px;
+  background: white;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 12px;
+  box-shadow: inset 0 0 0 4px #fff8fb;
+  transition: 0.3s ease;
+  animation: fadeUp 0.8s ease both;
+}
+
+.voucher:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.voucher:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.voucher:nth-child(4) {
+  animation-delay: 0.36s;
+}
+
+.voucher:nth-child(5) {
+  animation-delay: 0.48s;
+}
+
+.voucher:hover {
+  transform: rotate(-2deg) translateY(-10px) scale(1.05);
+  box-shadow: 0 18px 35px rgba(233, 30, 99, 0.2);
+}
+
+.voucher strong {
+  font-size: 19px;
+  color: #0b3a75;
+}
+
+.voucher p {
+  font-size: 13px;
+}
+
+.terms {
+  background: white;
+  border: 1px solid #efd6dc;
+  border-radius: 10px;
+  margin-top: 25px;
+  padding: 18px;
+}
+
+.terms h4 {
+  color: #0b3a75;
+  margin-bottom: 10px;
+}
+
+.clinicSection {
+  display: grid;
+  grid-template-columns: 27% 37% 36%;
+  gap: 18px;
+  padding: 0 22px 30px;
+}
+
+.helpCard,
+.mapCard,
+.streePanel {
+  border: 1px solid #ffd7b3;
+  border-radius: 14px;
+  background: #fff;
+  padding: 20px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  animation: fadeUp 0.8s ease both;
+}
+
+.helpCard:hover,
+.mapCard:hover,
+.streePanel:hover {
+  transform: translateY(-12px) scale(1.025);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.16);
+}
+
+.helpCard h2,
+.mapCard h2 {
+  color: #005aa9;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.helpCard p {
+  color: #475467;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.helpCard img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 12px;
+  margin-top: 16px;
+  transition: 0.35s ease;
+}
+
+.mapCard img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.35s ease;
+}
+
+.helpCard:hover img,
+.mapCard:hover img {
+  transform: scale(1.04);
+}
+
+.mapCard li {
+  list-style: none;
+  font-size: 13px;
+  margin: 7px 0;
+}
+
+.streePanel {
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.bigStree {
+  width: 150px;
+  height: 150px;
+  border: 7px solid #38bdf8;
+  border-radius: 30px;
+  display: grid;
+  place-items: center;
+  color: #0ea5e9;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 0.9;
+  animation: float 4s ease-in-out infinite;
+}
+
+.bigStree span {
+  font-size: 18px;
+  color: #e91e63;
+}
+
+.streePanel h3 {
+  color: #e91e63;
+}
+
+.streePanel h2 {
+  color: #111827;
+  font-size: 24px;
+}
+
+.stats {
+  background: #005aa9;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 10px;
+}
+
+.stats b {
+  background: #ff7a00;
+  padding: 2px 6px;
+  border-radius: 8px;
+  margin: 0 3px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 26px;
+  font-weight: 900;
+  color: white;
+}
+
+footer div:first-child {
+  background: #ed1748;
+  padding: 20px;
+  text-align: center;
+}
+
+footer div:last-child {
+  background: #ffd429;
+  color: #111827;
+  padding: 20px;
+  text-align: center;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(34px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatBubble {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  50% {
+    transform: translateY(-24px) translateX(16px) scale(1.08);
+  }
+}
+
+@keyframes heroFloat {
+  0%, 100% {
+    transform: scale(1.02) translateY(0);
+  }
+  50% {
+    transform: scale(1.05) translateY(-12px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(8deg);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .topHeader,
+  .hero,
+  .mainGrid,
+  .clinicSection {
+    grid-template-columns: 1fr;
+  }
+
+  .topicGrid,
+  .cards3,
+  .healthGrid,
+  .voucherGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ageGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heroText h2 {
+    font-size: 44px;
+  }
+
+  .heroText span,
+  .heroText b {
+    font-size: 54px;
+  }
+
+  .hero img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 650px) {
+  .topHeader {
+    padding: 14px;
+  }
+
+  .partnerLogos {
+    flex-wrap: wrap;
+  }
+
+  .heroText {
+    padding: 35px 22px;
+  }
+
+  .topicGrid,
+  .cards3,
+  .healthGrid,
+  .voucherGrid,
+  .ageGrid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    font-size: 20px;
+  }
+
+  .bataLogo h1 {
+    font-size: 34px;
+  }
+
+  .bataLogo p {
+    font-size: 16px;
+  }
+}
+
+.hero {
+  min-height: 420px;
+  display: grid;
+  grid-template-columns: 46% 54%;
+  align-items: center;
+  background: linear-gradient(90deg, #fff1f7 0%, #fff 45%, #fdf2f8 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.heroText {
+  padding: 55px 70px;
+  position: relative;
+  z-index: 2;
+  animation: slideLeft 0.9s ease both;
+}
+
+.hero img {
+  height: 420px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: heroFloat 4s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
 }
