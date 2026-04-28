@@ -1,1352 +1,696 @@
-// import React from "react";
-// import "./App.css";
-
-// const photos = {
-//   hero:
-//     "https://sa1s3optim.patientpop.com/assets/images/provider/photos/2477652.jpg",
-//   nutrition:
-//     "https://www.shutterstock.com/image-photo/young-indian-girl-working-out-260nw-2133599823.jpg",
-//   anemia:
-//     "https://www.verywellmind.com/thmb/qqVI7IaGg9MOChmqDqQai8tT1pA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/86482529-56a6f4495f9b58b7d0e5a9f2.jpg",
-//   menstrual:
-//     "https://www.globalgiving.org/pfil/24721/ph_24721_90124.jpg",
-//   wellbeing:
-//     "https://www.globalgiving.org/pfil/24721/ph_24721_90109.jpg",
-//   clinic:
-//     "https://www.unicef.org/sites/default/files/styles/media_large_image/public/UNI188210.JPG.webp?itok=G94lLZR0",
-//   sports:
-//     "https://www.globalgiving.org/pfil/24721/ph_24721_221931.jpg",
-//   voucher:
-//     "https://sesamism.com/cdn/shop/files/GiftVoucher_1080x.png?v=1702978552",
-// };
-
-// const content = {
-//   en: {
-//     heroTitle: "Bata Kishori Swasthya",
-//     heroSub: "Preparing young girls for a healthy transition to adulthood.",
-//     age: "Young Girls — 10 to 19 Years",
-//     intro:
-//       "Adolescence is a special, exciting and sometimes challenging period of life — transition from childhood to adulthood.",
-//     button: "Explore Program",
-//     topics: [
-//       "Nutrition & Anemia Prevention",
-//       "Hygienic Menstrual Practices",
-//       "Anemia Prevention",
-//       "HPV & Other Vaccine Awareness",
-//       "Prevention of Breast & Cervical Cancers",
-//     ],
-//     duringAge: [
-//       "Your body grows and changes rapidly",
-//       "Your thoughts and emotions develop",
-//       "You build friendships and relationships",
-//       "You learn independence and responsibility",
-//     ],
-//     thisTime: [
-//       "Discover your strengths",
-//       "Build confidence",
-//       "Develop healthy habits",
-//       "Shape your future",
-//       "Understand what is good and bad for your health",
-//     ],
-//     nutritionTitle: "Nutrition & Healthy Food",
-//     nutritionText: "Good nutrition helps you stay active, focused, and strong.",
-//     balancedDiet: [
-//       "Grains, pulses and legumes",
-//       "Green leafy vegetables",
-//       "Fresh fruits",
-//       "Milk and dairy products",
-//       "Eggs, nuts and seeds",
-//       "Animal proteins if preferred",
-//     ],
-//     habits: [
-//       "Do not skip breakfast",
-//       "Eat meals at regular intervals",
-//       "Drink 6–8 glasses of clean water daily",
-//       "Limit junk food and sugary drinks",
-//       "Stay physically active",
-//       "Get adequate sleep",
-//     ],
-//     benefits: [
-//       "Strong immunity",
-//       "Healthy growth",
-//       "Better academic performance",
-//       "Increased energy",
-//       "Improved confidence",
-//       "Better menstrual health in girls",
-//     ],
-//     anemiaTitle: "Prevention & Anemia Awareness",
-//     anemiaText:
-//       "Anemia is caused by low iron levels in the body. It can reduce energy and concentration.",
-//     anemiaSigns: [
-//       "Weakness",
-//       "Tiredness",
-//       "Fatigue",
-//       "Dizziness",
-//       "Headache",
-//       "Pale skin",
-//       "Difficulty concentrating",
-//     ],
-//     anemiaPrevention: [
-//       "Eat iron-rich foods",
-//       "Include Vitamin-C rich foods",
-//       "Take iron supplements if advised by a doctor",
-//       "Go for regular health check-ups",
-//     ],
-//     menstrualTitle: "Hygiene & Menstrual Health",
-//     menstrualText:
-//       "Menstruation is a natural and healthy part of growing up for girls. It is normal — not a disease.",
-//     hygiene: [
-//       "Use clean sanitary pads or menstrual products",
-//       "Change every 4–6 hours",
-//       "Wash hands before and after changing",
-//       "Maintain daily bathing and cleanliness",
-//       "Dispose used products safely",
-//     ],
-//     remember: [
-//       "Periods are normal and natural",
-//       "Girls can continue studies, sports and daily activities",
-//       "Open conversations help remove myths and stigma",
-//     ],
-//     wellbeingTitle: "Health & Well Being",
-//     wellbeing: [
-//       "Awareness about reproductive organs and anatomy",
-//       "Understanding body changes",
-//       "Awareness about contraception",
-//       "Respectful and healthy relationships",
-//       "Awareness about infections",
-//       "Good personal hygiene",
-//     ],
-//     pcosTitle: "PCOS / PCOD Awareness",
-//     pcosSigns: [
-//       "Irregular periods",
-//       "Acne",
-//       "Weight changes",
-//       "Excess hair growth",
-//     ],
-//     pcosHelp: [
-//       "Balanced diet",
-//       "Regular exercise",
-//       "Stress management",
-//       "Medical advice when needed",
-//     ],
-//     rtiTitle: "RTI / STI Awareness",
-//     rtiSigns: ["Unusual discharge", "Itching or irritation", "Pain or discomfort"],
-//     rtiPrevention: [
-//       "Maintain personal hygiene",
-//       "Seek early medical care",
-//       "Avoid unsafe practices",
-//       "Talk to a trusted health provider",
-//     ],
-//     cancerTitle: "Cancer Awareness",
-//     breast: [
-//       "Be aware of unusual lump, swelling or pain",
-//       "Report changes to a doctor promptly",
-//       "Early awareness helps detection",
-//     ],
-//     cervical: [
-//       "Maintain good hygiene",
-//       "Follow vaccination advice",
-//       "Regular screening later in life is important",
-//     ],
-//     voucherTitle: "Gift Vouchers",
-//     vouchers: [
-//       "Flat 50% OFF",
-//       "Flat 30% OFF",
-//       "Flat 10% OFF",
-//       "Flat ₹200 OFF",
-//       "Flat ₹500 OFF",
-//       "Flat ₹1000 OFF",
-//     ],
-//     terms: [
-//       "Non-returnable purchase.",
-//       "Valid only at authorised Bata retail stores / Stree Clinic as applicable.",
-//       "No exchange or return policy.",
-//       "Voucher is valid for six months from date of issue.",
-//       "Identity verification may be required.",
-//     ],
-//     clinicTitle: "Where to Seek Help",
-//     clinicText:
-//       "Adolescents can access safe, confidential and friendly health services at Stree Clinic and young-girls friendly health clinics.",
-//     cities: ["Barasat", "Behala", "Gariahat", "Hatibagan", "Tollygunge"],
-//     footer: "Main Hun Stree, Main Hun Kaabil",
-//   },
-
-//  hi: {
-//     nav: ["जागरूकता", "वाउचर", "क्लिनिक"],
-//     heroTitle: "बाटा किशोरी स्वास्थ्य",
-//     heroSub: "किशोरियों को स्वस्थ रूप से वयस्कता की ओर बढ़ने के लिए तैयार करना",
-//     age: "किशोरियाँ — 10 से 19 वर्ष",
-//     intro:
-//       "किशोरावस्था जीवन का एक विशेष, रोमांचक और कभी-कभी चुनौतीपूर्ण समय होता है — बचपन से वयस्कता की ओर परिवर्तन।",
-//     button: "कार्यक्रम देखें",
-
-//     topicsTitle: "जागरूकता सत्र",
-//     topics: [
-//       "पोषण और एनीमिया की रोकथाम",
-//       "स्वच्छ मासिक धर्म अभ्यास",
-//       "एनीमिया की रोकथाम",
-//       "एचपीवी और अन्य टीकों की जानकारी",
-//       "स्तन और गर्भाशय कैंसर की रोकथाम",
-//     ],
-
-//     duringAge: [
-//       "आपका शरीर तेजी से बढ़ता और बदलता है",
-//       "आपके विचार और भावनाएँ विकसित होती हैं",
-//       "आप दोस्ती और रिश्ते बनाते हैं",
-//       "आप स्वतंत्रता और जिम्मेदारी सीखते हैं",
-//     ],
-
-//     thisTime: [
-//       "अपनी ताकत पहचानें",
-//       "आत्मविश्वास बढ़ाएं",
-//       "स्वस्थ आदतें विकसित करें",
-//       "अपने भविष्य को आकार दें",
-//       "स्वास्थ्य के लिए क्या अच्छा और क्या बुरा है समझें",
-//     ],
-
-//     nutritionTitle: "पोषण और स्वस्थ भोजन",
-//     nutritionText: "अच्छा पोषण आपको सक्रिय, केंद्रित और मजबूत रखता है",
-
-//     balancedDiet: [
-//       "अनाज, दालें और फलियां",
-//       "हरी पत्तेदार सब्जियाँ",
-//       "ताजे फल",
-//       "दूध और डेयरी उत्पाद",
-//       "अंडे, मेवे और बीज",
-//       "मांसाहारी प्रोटीन (यदि पसंद हो)",
-//     ],
-
-//     habits: [
-//       "नाश्ता न छोड़ें",
-//       "समय पर भोजन करें",
-//       "रोज 6–8 गिलास पानी पिएं",
-//       "जंक फूड कम करें",
-//       "शारीरिक रूप से सक्रिय रहें",
-//       "पर्याप्त नींद लें",
-//     ],
-
-//     benefits: [
-//       "मजबूत प्रतिरक्षा",
-//       "स्वस्थ विकास",
-//       "बेहतर पढ़ाई प्रदर्शन",
-//       "अधिक ऊर्जा",
-//       "आत्मविश्वास में सुधार",
-//       "बेहतर मासिक धर्म स्वास्थ्य",
-//     ],
-
-//     anemiaTitle: "एनीमिया जागरूकता",
-//     anemiaText:
-//       "एनीमिया शरीर में आयरन की कमी से होता है, जिससे ऊर्जा और ध्यान कम हो सकता है",
-
-//     anemiaSigns: [
-//       "कमजोरी",
-//       "थकान",
-//       "चक्कर आना",
-//       "सिरदर्द",
-//       "पीली त्वचा",
-//       "ध्यान में कमी",
-//     ],
-
-//     anemiaPrevention: [
-//       "आयरन युक्त भोजन करें",
-//       "विटामिन C लें",
-//       "डॉक्टर की सलाह पर आयरन लें",
-//       "नियमित जांच करवाएं",
-//     ],
-
-//     menstrualTitle: "मासिक धर्म और स्वच्छता",
-//     menstrualText:
-//       "मासिक धर्म एक प्राकृतिक प्रक्रिया है, यह कोई बीमारी नहीं है",
-
-//     hygiene: [
-//       "साफ सैनिटरी उत्पाद का उपयोग करें",
-//       "हर 4–6 घंटे में बदलें",
-//       "हाथ धोएं",
-//       "दैनिक स्वच्छता रखें",
-//       "सुरक्षित निपटान करें",
-//     ],
-
-//     remember: [
-//       "पीरियड्स सामान्य हैं",
-//       "लड़कियाँ सब कर सकती हैं",
-//       "खुलकर बात करें",
-//     ],
-
-//     wellbeingTitle: "स्वास्थ्य और कल्याण",
-//     wellbeing: [
-//       "शरीर की समझ",
-//       "शारीरिक बदलाव",
-//       "गर्भनिरोधक जानकारी",
-//       "स्वस्थ रिश्ते",
-//       "संक्रमण की जानकारी",
-//       "व्यक्तिगत स्वच्छता",
-//     ],
-
-//     pcosTitle: "पीसीओएस जागरूकता",
-//     pcosSigns: ["अनियमित पीरियड्स", "मुंहासे", "वजन बदलाव", "अधिक बाल"],
-//     pcosHelp: ["संतुलित आहार", "व्यायाम", "तनाव नियंत्रण", "डॉक्टर सलाह"],
-
-//     rtiTitle: "आरटीआई / एसटीआई जागरूकता",
-//     rtiSigns: ["असामान्य डिस्चार्ज", "खुजली", "दर्द"],
-//     rtiPrevention: ["स्वच्छता", "डॉक्टर से मिलें", "सुरक्षित व्यवहार"],
-
-//     cancerTitle: "कैंसर जागरूकता",
-//     breast: ["गांठ पर ध्यान दें", "डॉक्टर को दिखाएं", "जल्दी पहचान जरूरी"],
-//     cervical: ["स्वच्छता रखें", "टीकाकरण लें", "जांच जरूरी"],
-
-//     voucherTitle: "उपहार वाउचर",
-//     vouchers: ["50% छूट", "30% छूट", "10% छूट", "₹200 छूट"],
-
-//     terms: [
-//       "कोई रिफंड नहीं",
-//       "केवल अधिकृत स्टोर में मान्य",
-//       "कोई एक्सचेंज नहीं",
-//       "6 महीने तक मान्य",
-//     ],
-
-//     clinicTitle: "मदद कहाँ मिलेगी",
-//     clinicText: "सुरक्षित स्वास्थ्य सेवाएं उपलब्ध हैं",
-//     cities: ["बरासात", "बेहाला", "गरियाहाट", "हाटीबागान", "टॉलीगंज"],
-
-//     footer: "मैं हूँ स्त्री, मैं हूँ काबिल",
-//   },
-
-//   gu: {
-//     nav: ["જાગૃતિ", "વાઉચર", "ક્લિનિક"],
-//     heroTitle: "બાટા કિશોરી સ્વાસ્થ્ય",
-//     heroSub: "યુવાન છોકરીઓને સ્વસ્થ જીવન માટે તૈયાર કરવું",
-//     button: "પ્રોગ્રામ જુઓ",
-
-//     topics: [
-//       "પોષણ અને એનિમિયા નિવારણ",
-//       "સ્વચ્છ માસિક પ્રથા",
-//       "HPV જાગૃતિ",
-//       "કેન્સર નિવારણ",
-//     ],
-
-//     duringAge: [
-//       "શરીર ઝડપથી બદલાય છે",
-//       "વિચાર અને ભાવનાઓ વિકસે છે",
-//       "મિત્રતા થાય છે",
-//     ],
-
-//     thisTime: [
-//       "આત્મવિશ્વાસ બનાવો",
-//       "સ્વસ્થ આદતો અપનાવો",
-//     ],
-
-//     nutritionTitle: "સ્વસ્થ આહાર",
-//     nutritionText: "સારો આહાર તમને મજબૂત બનાવે છે",
-
-//     anemiaTitle: "એનિમિયા",
-//     anemiaText: "લોહીની કમીથી થાય છે",
-
-//     menstrualTitle: "માસિક સ્વચ્છતા",
-//     menstrualText: "આ સ્વાભાવિક છે",
-
-//     wellbeingTitle: "સ્વાસ્થ્ય",
-//     voucherTitle: "વાઉચર",
-//     clinicTitle: "મદદ ક્યાં મળશે",
-
-//     footer: "હું સ્ત્રી છું, હું સક્ષમ છું",
-//   },
-
-//   mr: {
-//     nav: ["जागरूकता", "व्हाउचर", "क्लिनिक"],
-//     heroTitle: "बाटा किशोरी स्वास्थ्य",
-//     heroSub: "मुलींना निरोगी जीवनासाठी तयार करणे",
-//     button: "कार्यक्रम पहा",
-
-//     topics: [
-//       "पोषण आणि अॅनिमिया प्रतिबंध",
-//       "मासिक पाळी स्वच्छता",
-//       "HPV जागरूकता",
-//       "कर्करोग प्रतिबंध",
-//     ],
-
-//     duringAge: [
-//       "शरीर बदलते",
-//       "विचार वाढतात",
-//       "मैत्री होते",
-//     ],
-
-//     thisTime: [
-//       "आत्मविश्वास वाढवा",
-//       "चांगल्या सवयी लावा",
-//     ],
-
-//     nutritionTitle: "पोषण",
-//     anemiaTitle: "अॅनिमिया",
-//     menstrualTitle: "मासिक पाळी",
-//     wellbeingTitle: "आरोग्य",
-
-//     voucherTitle: "व्हाउचर",
-//     clinicTitle: "मदत कुठे मिळेल",
-
-//     footer: "मी स्त्री आहे, मी सक्षम आहे",
-//   },
-// };
-
-// function getText(lang) {
-//   return { ...content.en, ...content[lang] };
-// }
-
-// function SectionCard({ title, items, img }) {
-//   return (
-//     <div className="info-card">
-//       <img src={img} alt={title} />
-//       <h3>{title}</h3>
-//       <ul>
-//         {items.map((item) => (
-//           <li key={item}>{item}</li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default function App() {
-//   const [lang, setLang] = React.useState("en");
-//   const t = getText(lang);
-
-//   return (
-//     <div className="app">
-//       <header className="navbar">
-//         <div className="logo">
-//           <span>Bata</span> Kishori Swasthya
-//         </div>
-
-//         <select value={lang} onChange={(e) => setLang(e.target.value)}>
-//           <option value="en">English</option>
-//           <option value="hi">Hindi</option>
-//           <option value="gu">Gujarati</option>
-//           <option value="mr">Marathi</option>
-//         </select>
-//       </header>
-
-//       <section className="hero">
-//         <div className="float f1"></div>
-//         <div className="float f2"></div>
-
-//         <div>
-//           <p className="tag">A CSR Initiative</p>
-//           <h1>{t.heroTitle}</h1>
-//           <p>{t.heroSub}</p>
-//           <a href="#awareness" className="btn">
-//             {t.button}
-//           </a>
-//         </div>
-
-//         <img className="hero-img" src={photos.hero} alt="young girls" />
-//       </section>
-
-//       <section className="intro">
-//         <h2>{t.age}</h2>
-//         <p>{t.intro}</p>
-
-//         <div className="topic-grid">
-//           {t.topics.map((topic) => (
-//             <div className="topic" key={topic}>
-//               {topic}
-//             </div>
-//           ))}
-//         </div>
-//       </section>
-
-//       <section id="awareness" className="grid-section">
-//         <SectionCard title="During this age" items={t.duringAge} img={photos.sports} />
-//         <SectionCard title="This is time to" items={t.thisTime} img={photos.wellbeing} />
-//       </section>
-
-//       <section className="content-section">
-//         <h2>{t.nutritionTitle}</h2>
-//         <p>{t.nutritionText}</p>
-
-//         <div className="three-grid">
-//           <SectionCard title="Eat a Balanced Diet" items={t.balancedDiet} img={photos.nutrition} />
-//           <SectionCard title="Healthy Habits" items={t.habits} img={photos.hero} />
-//           <SectionCard title="Benefits of Good Nutrition" items={t.benefits} img={photos.sports} />
-//         </div>
-//       </section>
-
-//       <section className="content-section pink">
-//         <h2>{t.anemiaTitle}</h2>
-//         <p>{t.anemiaText}</p>
-
-//         <div className="two-grid">
-//           <SectionCard title="Signs of Anemia" items={t.anemiaSigns} img={photos.anemia} />
-//           <SectionCard title="Prevention" items={t.anemiaPrevention} img={photos.nutrition} />
-//         </div>
-//       </section>
-
-//       <section className="content-section green">
-//         <h2>{t.menstrualTitle}</h2>
-//         <p>{t.menstrualText}</p>
-
-//         <div className="two-grid">
-//           <SectionCard title="Good Hygiene Practices" items={t.hygiene} img={photos.menstrual} />
-//           <SectionCard title="Remember" items={t.remember} img={photos.wellbeing} />
-//         </div>
-//       </section>
-
-//       <section className="content-section">
-//         <h2>{t.wellbeingTitle}</h2>
-
-//         <div className="three-grid">
-//           <SectionCard title="Includes" items={t.wellbeing} img={photos.wellbeing} />
-//           <SectionCard title={t.pcosTitle} items={[...t.pcosSigns, ...t.pcosHelp]} img={photos.anemia} />
-//           <SectionCard title={t.rtiTitle} items={[...t.rtiSigns, ...t.rtiPrevention]} img={photos.clinic} />
-//         </div>
-//       </section>
-
-//       <section className="content-section blue">
-//         <h2>{t.cancerTitle}</h2>
-
-//         <div className="two-grid">
-//           <SectionCard title="Breast Health for Girls" items={t.breast} img={photos.wellbeing} />
-//           <SectionCard title="Cervical Health" items={t.cervical} img={photos.clinic} />
-//         </div>
-//       </section>
-
-//       <section id="vouchers" className="voucher-section">
-//         <h2>{t.voucherTitle}</h2>
-
-//         <div className="voucher-grid">
-//           {t.vouchers.map((voucher) => (
-//             <div className="voucher-card" key={voucher}>
-//               <img src={photos.voucher} alt={voucher} />
-//               <h3>{voucher}</h3>
-//               <p>Bata Stree Kishori Swasthya Gift Voucher</p>
-//             </div>
-//           ))}
-//         </div>
-
-//         <div className="terms">
-//           <h3>Terms & Conditions</h3>
-//           <ul>
-//             {t.terms.map((term) => (
-//               <li key={term}>{term}</li>
-//             ))}
-//           </ul>
-//         </div>
-//       </section>
-
-//       <section id="clinics" className="clinics">
-//         <h2>{t.clinicTitle}</h2>
-//         <p>{t.clinicText}</p>
-
-//         <img src={photos.clinic} alt="clinic" />
-
-//         <div className="clinic-grid">
-//           {t.cities.map((city) => (
-//             <div key={city}>
-//               <h3>{city}</h3>
-//               <p>+91-7703-9502-XX</p>
-//             </div>
-//           ))}
-//         </div>
-//       </section>
-
-//       <footer>
-//         <h2>{t.footer}</h2>
-//         <p>www.parivarseva.org | Helpline: 1800-123-7075</p>
-//       </footer>
-//     </div>
-//   );
-// }
-
-
-
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
-const img = {
-  hero: "https://www.theigc.org/sites/default/files/styles/og_image/public/2024-03/Mother%20holds%20child%20while%20health%20worker%20administers%20an%20immunisation%20shot_0.jpg?h=d3b3e1d7&itok=-WkR8zy_?auto=format&fit=crop&w=1200&q=80",
-  nutrition: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Community_health_worker_gives_a_vaccination_in_Odisha_state%2C_India_%288380317750%29.jpg/960px-Community_health_worker_gives_a_vaccination_in_Odisha_state%2C_India_%288380317750%29.jpg",
-  pad: "https://cdn.prod.website-files.com/67f3913067a711c244440894/69d33eab86fe792c6544c5dd_womenguju.jpg",
-  blood: "https://www.shutterstock.com/image-photo/concept-indian-rural-women-health-260nw-2559820611.jpg",
-  vaccine: "https://www.shutterstock.com/image-photo/young-woman-doctor-checking-blood-260nw-2249870979.jpg",
-  cancer: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTguJzaU1YOsw0DZqbKsL_eUWa0DcmY-A9y4w&s",
-  sports: "https://terredeshommessuisse.ch/wp-content/uploads/2024/05/jeune-fille-inde-768x576.jpg",
-  study: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbFJv1zPFRmysgXjjl44uknEdqBJgMEOW8lw&s",
-  doctor: "https://www.shutterstock.com/image-photo/concept-indian-rural-women-health-260nw-2559437759.jpg",
-  clinic: "https://www.shutterstock.com/image-photo/concept-indian-rural-women-health-260nw-2559820611.jpg",
-  map: "https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=900&q=80",
+const ASSETS = {
+  bataLogo: "/assets/bata-logo.png",
+    bataHeroLogo: "/assets/bata-logo-hero.png",
+  streeLogo: "/assets/stree-logo.png",
+  parivarLogo: "/assets/parivar-seva-logo.png",
+  heroGirl: "/assets/hero-girl.png",
+  nutrition: "/assets/nutrition.png",
+  hygiene: "/assets/hygiene.png",
+  anemia: "/assets/anemia.png",
+  vaccine: "/assets/vaccine.png",
+  sports1: "/assets/sports-1.png",
+  sports2: "/assets/sports-2.png",
+  sports3: "/assets/sports-3.png",
+  clinic: "/assets/clinic.png",
 };
 
-const translations = {
+const content = {
   en: {
-    home: "🏠 Home",
-    awareness: "🧑‍🏫 Awareness Sessions",
-    nutrition: "🥗 Nutrition & Health",
-    women: "💎 Women’s Health",
-    wellbeing: "💙 Well Being",
-    vouchers: "🎁 Gift Vouchers",
-    clinics: "🏥 Stree Clinics",
-    contact: "☎ Contact Us",
-
-    hero1: "Main Hun",
-    hero2: "Stree,",
-    hero3: "Main Hun",
-    hero4: "Kaabil",
-    shine: "Your Time to Grow, Learn & Shine",
-    prepare: "Preparing Young Girls For A Healthy Transition To Adulthood",
-    age: "Young Girls — 10 to 19 Years",
-
-    awarenessTitle: "Awareness Sessions on",
-    nutritionTitle: "Nutrition & Healthy Food",
-    nutritionSub: "Good nutrition helps you stay active, focused and strong.",
-    wellbeingTitle: "Health & Well Being",
-    wellbeingSub: "Safe choices start with right information.",
-    voucherTitle: "Gift Vouchers",
-    termsTitle: "TERMS & CONDITIONS",
-    helpTitle: "Where to Seek Help",
-    helpText:
-      "Adolescents can access safe, confidential and friendly health services at Stree Clinic and young-girls friendly health clinics.",
-    clinicTitle: "Stree Clinics in Kolkata",
-    footerWebsite: "🌐 www.parivarseva.org",
-    footerHelpline: "📞 Helpline : 1800-123-7075",
-
-    topics: [
-      "Nutrition & Anemia Prevention",
-      "Hygienic Menstrual Practices",
-      "Anemia Prevention",
-      "HPV & Other Vaccine Awareness",
-      "Prevention of Breast & Cervical Cancers",
-    ],
-
-    duringTitle: "During this Age:",
-    during: [
-      "Your body grows & changes rapidly",
+    langName: "English",
+    nav: ["Home", "Awareness", "Health", "Vouchers", "Help"],
+    heroTitle: "Bata Kishori Swasthya",
+    heroSub: "Preparing Young Girls for a Healthy Transition to Adulthood",
+    heroText:
+      "A CSR initiative focused on adolescent girls, health awareness, confidence, hygiene, nutrition, anemia prevention, vaccine awareness, and early cancer prevention.",
+    cta: "Explore Program",
+    ageTitle: "Young Girls — 10 to 19 Years",
+    ageText:
+      "Adolescence is a special, exciting and sometimes challenging period of life. It is a time of rapid growth, learning, discovery and new opportunities.",
+    duringAge: "During this age",
+    duringPoints: [
+      "Your body grows and changes rapidly",
       "Your thoughts and emotions develop",
       "You build friendships and relationships",
       "You learn independence and responsibility",
     ],
-
-    timeTitle: "This is time to:",
-    time: [
+    timeTitle: "This is time to",
+    timePoints: [
       "Discover your strengths",
       "Build confidence",
       "Develop healthy habits",
       "Shape your future",
       "Understand what is good and bad for your health",
     ],
-
-    balancedTitle: "Eat a Balanced Diet",
-    balanced: [
-      "Grains, pulses & legumes",
-      "Green leafy vegetables",
-      "Fresh fruits",
-      "Milk & dairy products",
-      "Eggs, nuts & seeds",
-      "Animal proteins if preferred",
+    awarenessTitle: "Awareness Sessions",
+    awarenessCards: [
+      {
+        title: "Nutrition & Healthy Food",
+        img: ASSETS.nutrition,
+        desc: "Good nutrition helps you stay active, focused and strong.",
+        points: [
+          "Eat grains, pulses and legumes",
+          "Include green leafy vegetables and fresh fruits",
+          "Drink 6–8 glasses of clean water daily",
+          "Avoid junk food and sugary drinks",
+          "Get adequate sleep",
+        ],
+      },
+      {
+        title: "Prevention & Anemia Awareness",
+        img: ASSETS.anemia,
+        desc: "Anemia is caused by low iron levels and may reduce energy and concentration.",
+        points: [
+          "Weakness, tiredness and fatigue can be signs",
+          "Eat iron-rich foods like green leafy vegetables, jaggery and dates",
+          "Include Vitamin-C rich foods",
+          "Take supplements only if advised by a doctor",
+        ],
+      },
+      {
+        title: "Hygiene & Menstrual Health",
+        img: ASSETS.hygiene,
+        desc: "Menstruation is natural and healthy. It is not a disease.",
+        points: [
+          "Use clean sanitary pads or menstrual products",
+          "Change every 4–6 hours",
+          "Wash hands before and after changing",
+          "Dispose used products safely",
+          "Girls can continue studies, sports and daily activities",
+        ],
+      },
+      {
+        title: "HPV & Vaccine Awareness",
+        img: ASSETS.vaccine,
+        desc: "Vaccination and correct guidance can help protect long-term health.",
+        points: [
+          "Follow medical advice",
+          "Understand vaccine benefits",
+          "Speak to trusted health providers",
+          "Take preventive care seriously",
+        ],
+      },
     ],
-
-    habitsTitle: "Healthy Habits",
-    habits: [
-      "Do not skip breakfast",
-      "Eat meals at regular intervals",
-      "Drink 6–8 glasses of water daily",
-      "Limit junk food",
-      "Stay physically active",
-      "Get adequate sleep",
+    healthTitle: "Health & Well Being",
+    healthText:
+      "Understanding your body helps you make safe and responsible choices.",
+    healthCards: [
+      "Awareness about reproductive organs and body changes",
+      "Respectful and healthy relationships",
+      "Awareness about infections",
+      "Good personal hygiene",
+      "PCOS / PCOD awareness",
+      "Breast and cervical cancer awareness",
     ],
-
-    benefitsTitle: "Benefits of Good Nutrition",
-    benefits: [
-      "Strong immunity",
-      "Healthy growth",
-      "Better academic performance",
-      "Increased energy",
-      "Improved confidence",
-      "Better menstrual health",
+    vouchersTitle: "Bata Stree Kishori Swasthya Vouchers",
+    vouchers: [
+      "Flat 50% OFF on your health checkup at Stree Clinic",
+      "Flat 30% OFF on your health checkup at Stree Clinic",
+      "Flat 10% OFF on your health checkup at Stree Clinic",
+      "Flat ₹200 OFF on purchases above ₹1000",
+      "Flat ₹500 OFF on purchases above ₹1500",
+      "Flat ₹1000 OFF on purchases above ₹3000",
     ],
-
-    pcosTitle: "PCOS / PCOD Awareness",
-    pcos: [
-      "Irregular periods",
-      "Acne",
-      "Weight changes",
-      "Excess hair growth",
-      "Balanced diet",
-      "Exercise & stress management",
-    ],
-
-    rtiTitle: "RTI / STI Awareness",
-    rti: [
-      "Unusual discharge",
-      "Itching or irritation",
-      "Pain or discomfort",
-      "Maintain hygiene",
-      "Seek early medical care",
-    ],
-
-    cancerTitle: "Cancer Awareness",
-    cancer: [
-      "Breast health for girls",
-      "Report unusual lump or pain",
-      "Cervical health",
-      "Follow vaccination advice",
-      "Regular screening later in life",
-    ],
-
-    vouchersList: [
-      "FLAT 50% OFF",
-      "FLAT 30% OFF",
-      "FLAT 10% OFF",
-      "FLAT ₹200 OFF",
-      "FLAT ₹500 OFF",
-      "FLAT ₹1000 OFF",
-    ],
-
-    voucherSub: "On Your Health Checkup / Purchases",
-
+    termsTitle: "Voucher Terms & Conditions",
     terms: [
-      "Non-returnable purchase.",
-      "Valid only at authorised Bata retail stores / Stree Clinic as applicable.",
-      "No exchange or return policy.",
-      "Voucher is valid for six months from the date of issue.",
-      "Identity verification may be required.",
+      "All purchases using this voucher are strictly non-returnable and non-refundable.",
+      "Voucher is valid only at authorised Bata retail stores or authorised Stree Clinic locations as applicable.",
+      "Products purchased using this voucher cannot be exchanged or returned once transaction is completed.",
+      "Voucher validity is six months from date of issue.",
+      "The voucher is non-transferable and can be redeemed only by the named beneficiary.",
     ],
+    helpTitle: "Where to Seek Help",
+    helpText:
+      "Adolescents can access safe, confidential and friendly health services at Stree Clinic and young-girls-friendly health clinics.",
+    clinics: [
+      "Barasat — Barrackpore Road",
+      "Behala — 39, Diamond Harbour Road",
+      "Gariahat — 48, Gariahat Road",
+      "Hatibagan — 100, Arabindo Sarani",
+      "Tollygunge — 284 NSC Bose Road",
+    ],
+    footer: "Main Hun Stree, Main Hun Kaabil",
   },
 
   hi: {
-    home: "🏠 होम",
-    awareness: "🧑‍🏫 जागरूकता सत्र",
-    nutrition: "🥗 पोषण और स्वास्थ्य",
-    women: "💎 महिला स्वास्थ्य",
-    wellbeing: "💙 स्वास्थ्य व कल्याण",
-    vouchers: "🎁 उपहार वाउचर",
-    clinics: "🏥 स्त्री क्लिनिक",
-    contact: "☎ संपर्क करें",
-
-    hero1: "मैं हूँ",
-    hero2: "स्त्री,",
-    hero3: "मैं हूँ",
-    hero4: "काबिल",
-    shine: "बढ़ने, सीखने और चमकने का समय",
-    prepare: "किशोरियों को स्वस्थ वयस्कता के लिए तैयार करना",
-    age: "किशोरियाँ — 10 से 19 वर्ष",
-
-    awarenessTitle: "जागरूकता सत्र",
-    nutritionTitle: "पोषण और स्वस्थ भोजन",
-    nutritionSub: "अच्छा पोषण आपको सक्रिय, केंद्रित और मजबूत रखता है।",
-    wellbeingTitle: "स्वास्थ्य और कल्याण",
-    wellbeingSub: "सही जानकारी से सुरक्षित निर्णय शुरू होते हैं।",
-    voucherTitle: "उपहार वाउचर",
-    termsTitle: "नियम और शर्तें",
-    helpTitle: "मदद कहाँ मिलेगी",
-    helpText:
-      "किशोरियाँ स्त्री क्लिनिक और युवा-मैत्री स्वास्थ्य केंद्रों पर सुरक्षित, गोपनीय और friendly स्वास्थ्य सेवाएँ ले सकती हैं।",
-    clinicTitle: "कोलकाता में स्त्री क्लिनिक",
-    footerWebsite: "🌐 www.parivarseva.org",
-    footerHelpline: "📞 हेल्पलाइन : 1800-123-7075",
-
-    topics: [
-      "पोषण और एनीमिया की रोकथाम",
-      "स्वच्छ मासिक धर्म अभ्यास",
-      "एनीमिया की रोकथाम",
-      "HPV और अन्य टीकों की जानकारी",
-      "स्तन और गर्भाशय कैंसर की रोकथाम",
+    langName: "हिंदी",
+    nav: ["होम", "जागरूकता", "स्वास्थ्य", "वाउचर", "सहायता"],
+    heroTitle: "बाटा किशोरी स्वास्थ्य",
+    heroSub: "युवा लड़कियों को स्वस्थ बदलाव के लिए तैयार करना",
+    heroText:
+      "यह पहल किशोरियों के स्वास्थ्य, आत्मविश्वास, पोषण, स्वच्छता, एनीमिया रोकथाम, वैक्सीन जागरूकता और कैंसर की शुरुआती रोकथाम पर केंद्रित है।",
+    cta: "प्रोग्राम देखें",
+    ageTitle: "युवा लड़कियां — 10 से 19 वर्ष",
+    ageText:
+      "किशोरावस्था जीवन का खास, रोमांचक और कभी-कभी चुनौतीपूर्ण समय है। यह तेजी से बढ़ने, सीखने और नए अवसरों का समय है।",
+    duringAge: "इस उम्र में",
+    duringPoints: [
+      "शरीर तेजी से बढ़ता और बदलता है",
+      "विचार और भावनाएं विकसित होती हैं",
+      "दोस्ती और रिश्ते बनते हैं",
+      "स्वतंत्रता और जिम्मेदारी सीखते हैं",
     ],
-
-    duringTitle: "इस उम्र में:",
-    during: [
-      "आपका शरीर तेजी से बढ़ता और बदलता है",
-      "आपके विचार और भावनाएँ विकसित होती हैं",
-      "आप दोस्ती और रिश्ते बनाते हैं",
-      "आप स्वतंत्रता और जिम्मेदारी सीखते हैं",
-    ],
-
-    timeTitle: "यह समय है:",
-    time: [
+    timeTitle: "यह समय है",
+    timePoints: [
       "अपनी ताकत पहचानने का",
       "आत्मविश्वास बढ़ाने का",
-      "स्वस्थ आदतें विकसित करने का",
-      "अपने भविष्य को आकार देने का",
-      "स्वास्थ्य के लिए क्या अच्छा और बुरा है समझने का",
+      "स्वस्थ आदतें बनाने का",
+      "अपना भविष्य संवारने का",
+      "स्वास्थ्य के लिए सही-गलत समझने का",
     ],
-
-    balancedTitle: "संतुलित आहार लें",
-    balanced: [
-      "अनाज, दालें और फलियाँ",
-      "हरी पत्तेदार सब्जियाँ",
-      "ताजे फल",
-      "दूध और डेयरी उत्पाद",
-      "अंडे, मेवे और बीज",
-      "यदि पसंद हो तो पशु प्रोटीन",
+    awarenessTitle: "जागरूकता सत्र",
+    awarenessCards: [
+      {
+        title: "पोषण और स्वस्थ भोजन",
+        img: ASSETS.nutrition,
+        desc: "अच्छा पोषण आपको सक्रिय, केंद्रित और मजबूत रखता है।",
+        points: [
+          "अनाज, दालें और फलियां खाएं",
+          "हरी सब्जियां और ताजे फल लें",
+          "रोज 6–8 गिलास साफ पानी पिएं",
+          "जंक फूड और मीठे पेय से बचें",
+          "पर्याप्त नींद लें",
+        ],
+      },
+      {
+        title: "एनीमिया रोकथाम",
+        img: ASSETS.anemia,
+        desc: "एनीमिया शरीर में आयरन की कमी से होता है।",
+        points: [
+          "कमजोरी और थकान इसके संकेत हो सकते हैं",
+          "हरी सब्जियां, गुड़ और खजूर खाएं",
+          "विटामिन-C वाले भोजन शामिल करें",
+          "डॉक्टर की सलाह पर ही सप्लीमेंट लें",
+        ],
+      },
+      {
+        title: "स्वच्छता और मासिक धर्म स्वास्थ्य",
+        img: ASSETS.hygiene,
+        desc: "मासिक धर्म प्राकृतिक और स्वस्थ प्रक्रिया है। यह बीमारी नहीं है।",
+        points: [
+          "साफ सैनिटरी पैड या उत्पाद इस्तेमाल करें",
+          "हर 4–6 घंटे में बदलें",
+          "हाथ धोना जरूरी है",
+          "उपयोग किए गए उत्पाद सुरक्षित तरीके से फेंकें",
+          "लड़कियां पढ़ाई और खेल जारी रख सकती हैं",
+        ],
+      },
+      {
+        title: "HPV और वैक्सीन जागरूकता",
+        img: ASSETS.vaccine,
+        desc: "वैक्सीन और सही सलाह लंबे समय तक स्वास्थ्य सुरक्षा देती है।",
+        points: [
+          "मेडिकल सलाह का पालन करें",
+          "वैक्सीन के लाभ समझें",
+          "विश्वसनीय स्वास्थ्य कर्मी से बात करें",
+          "रोकथाम को गंभीरता से लें",
+        ],
+      },
     ],
-
-    habitsTitle: "स्वस्थ आदतें",
-    habits: [
-      "नाश्ता न छोड़ें",
-      "समय पर भोजन करें",
-      "रोज 6–8 गिलास पानी पिएं",
-      "जंक फूड कम करें",
-      "शारीरिक रूप से सक्रिय रहें",
-      "पर्याप्त नींद लें",
+    healthTitle: "स्वास्थ्य और कल्याण",
+    healthText: "अपने शरीर को समझना सुरक्षित और जिम्मेदार चुनाव करने में मदद करता है।",
+    healthCards: [
+      "शरीर में बदलाव की जानकारी",
+      "सम्मानजनक और स्वस्थ रिश्ते",
+      "संक्रमणों की जागरूकता",
+      "अच्छी व्यक्तिगत स्वच्छता",
+      "PCOS / PCOD जागरूकता",
+      "ब्रेस्ट और सर्वाइकल कैंसर जागरूकता",
     ],
-
-    benefitsTitle: "अच्छे पोषण के फायदे",
-    benefits: [
-      "मजबूत प्रतिरक्षा",
-      "स्वस्थ विकास",
-      "बेहतर पढ़ाई प्रदर्शन",
-      "अधिक ऊर्जा",
-      "आत्मविश्वास में सुधार",
-      "बेहतर मासिक धर्म स्वास्थ्य",
+    vouchersTitle: "बाटा स्त्री किशोरी स्वास्थ्य वाउचर",
+    vouchers: [
+      "Stree Clinic में हेल्थ चेकअप पर 50% छूट",
+      "Stree Clinic में हेल्थ चेकअप पर 30% छूट",
+      "Stree Clinic में हेल्थ चेकअप पर 10% छूट",
+      "₹1000 से ऊपर खरीदारी पर ₹200 छूट",
+      "₹1500 से ऊपर खरीदारी पर ₹500 छूट",
+      "₹3000 से ऊपर खरीदारी पर ₹1000 छूट",
     ],
-
-    pcosTitle: "PCOS / PCOD जागरूकता",
-    pcos: [
-      "अनियमित पीरियड्स",
-      "मुंहासे",
-      "वजन में बदलाव",
-      "अधिक बाल बढ़ना",
-      "संतुलित आहार",
-      "व्यायाम और तनाव नियंत्रण",
-    ],
-
-    rtiTitle: "RTI / STI जागरूकता",
-    rti: [
-      "असामान्य डिस्चार्ज",
-      "खुजली या जलन",
-      "दर्द या असुविधा",
-      "स्वच्छता बनाए रखें",
-      "जल्दी डॉक्टर से सलाह लें",
-    ],
-
-    cancerTitle: "कैंसर जागरूकता",
-    cancer: [
-      "लड़कियों के लिए स्तन स्वास्थ्य",
-      "गांठ या दर्द दिखे तो डॉक्टर को बताएं",
-      "गर्भाशय स्वास्थ्य",
-      "टीकाकरण सलाह का पालन करें",
-      "बाद के जीवन में नियमित जांच जरूरी",
-    ],
-
-    vouchersList: [
-      "50% छूट",
-      "30% छूट",
-      "10% छूट",
-      "₹200 छूट",
-      "₹500 छूट",
-      "₹1000 छूट",
-    ],
-
-    voucherSub: "हेल्थ चेकअप / खरीदारी पर",
-
+    termsTitle: "वाउचर नियम और शर्तें",
     terms: [
-      "खरीदारी नॉन-रिटर्नेबल है।",
-      "केवल अधिकृत Bata स्टोर / Stree Clinic में मान्य।",
-      "एक्सचेंज या रिटर्न मान्य नहीं।",
-      "वाउचर जारी होने की तारीख से 6 महीने तक मान्य है।",
-      "पहचान सत्यापन की आवश्यकता हो सकती है।",
+      "वाउचर से खरीदी गई वस्तुएं नॉन-रिटर्नेबल और नॉन-रिफंडेबल हैं।",
+      "वाउचर केवल अधिकृत स्टोर या Stree Clinic पर मान्य है।",
+      "खरीद पूरी होने के बाद एक्सचेंज या रिटर्न नहीं होगा।",
+      "वाउचर जारी होने की तारीख से 6 महीने तक वैध है।",
+      "वाउचर ट्रांसफर नहीं किया जा सकता।",
     ],
+    helpTitle: "सहायता कहां लें",
+    helpText:
+      "किशोरियां Stree Clinic और young-girls-friendly health clinics में सुरक्षित और गोपनीय स्वास्थ्य सेवाएं ले सकती हैं।",
+    clinics: [
+      "बारासात — बैरकपुर रोड",
+      "बेहाला — डायमंड हार्बर रोड",
+      "गरियाहाट — गरियाहाट रोड",
+      "हाटीबागान — अरबिंदो सरणी",
+      "टॉलीगंज — NSC बोस रोड",
+    ],
+    footer: "मैं हूं स्त्री, मैं हूं काबिल",
   },
 
   gu: {
-    home: "🏠 હોમ",
-    awareness: "🧑‍🏫 જાગૃતિ સત્ર",
-    nutrition: "🥗 પોષણ અને આરોગ્ય",
-    women: "💎 મહિલા આરોગ્ય",
-    wellbeing: "💙 સુખાકારી",
-    vouchers: "🎁 ગિફ્ટ વાઉચર",
-    clinics: "🏥 સ્ત્રી ક્લિનિક",
-    contact: "☎ સંપર્ક",
-
-    hero1: "હું છું",
-    hero2: "સ્ત્રી,",
-    hero3: "હું છું",
-    hero4: "કાબિલ",
-    shine: "વધવાનો, શીખવાનો અને ચમકવાનો સમય",
-    prepare: "યુવાન છોકરીઓને સ્વસ્થ વયસ્કતા માટે તૈયાર કરવું",
-    age: "યુવાન છોકરીઓ — 10 થી 19 વર્ષ",
-
-    awarenessTitle: "જાગૃતિ સત્રો",
-    nutritionTitle: "પોષણ અને સ્વસ્થ ખોરાક",
-    nutritionSub: "સારો પોષણ તમને સક્રિય, કેન્દ્રિત અને મજબૂત રાખે છે.",
-    wellbeingTitle: "આરોગ્ય અને સુખાકારી",
-    wellbeingSub: "સાચી માહિતીથી સલામત પસંદગી શરૂ થાય છે.",
-    voucherTitle: "ગિફ્ટ વાઉચર",
-    termsTitle: "નિયમો અને શરતો",
-    helpTitle: "મદદ ક્યાં મળશે",
-    helpText:
-      "કિશોરીઓ સ્ત્રી ક્લિનિક અને યુવતીઓ માટે અનુકૂળ આરોગ્ય કેન્દ્રોમાં સલામત અને ગોપનીય સેવાઓ મેળવી શકે છે.",
-    clinicTitle: "કોલકાતામાં સ્ત્રી ક્લિનિક",
-    footerWebsite: "🌐 www.parivarseva.org",
-    footerHelpline: "📞 હેલ્પલાઇન : 1800-123-7075",
-
-    topics: [
-      "પોષણ અને એનિમિયા નિવારણ",
-      "સ્વચ્છ માસિક પ્રથા",
-      "એનિમિયા નિવારણ",
-      "HPV અને અન્ય રસીની જાગૃતિ",
-      "સ્તન અને સર્વિકલ કેન્સર નિવારણ",
-    ],
-
-    duringTitle: "આ ઉંમરમાં:",
-    during: [
-      "તમારું શરીર ઝડપથી વધે અને બદલાય છે",
-      "તમારા વિચારો અને ભાવનાઓ વિકસે છે",
-      "તમે મિત્રતા અને સંબંધો બનાવો છો",
-      "તમે સ્વતંત્રતા અને જવાબદારી શીખો છો",
-    ],
-
-    timeTitle: "આ સમય છે:",
-    time: [
-      "તમારી શક્તિઓ ઓળખવાનો",
-      "આત્મવિશ્વાસ વધારવાનો",
-      "સ્વસ્થ આદતો વિકસાવવાનો",
-      "તમારું ભવિષ્ય ઘડવાનો",
-      "આરોગ્ય માટે શું સારું અને ખરાબ છે તે સમજવાનો",
-    ],
-
-    balancedTitle: "સંતુલિત આહાર લો",
-    balanced: [
-      "અનાજ, દાળ અને કઠોળ",
-      "લીલા પાંદડાવાળી શાકભાજી",
-      "તાજા ફળો",
-      "દૂધ અને ડેરી ઉત્પાદનો",
-      "ઈંડા, બદામ અને બીજ",
-      "જો પસંદ હોય તો પ્રાણી પ્રોટીન",
-    ],
-
-    habitsTitle: "સ્વસ્થ આદતો",
-    habits: [
-      "નાસ્તો છોડશો નહીં",
-      "નિયમિત સમયે ભોજન લો",
-      "દરરોજ 6–8 ગ્લાસ પાણી પીઓ",
-      "જંક ફૂડ ઓછું કરો",
-      "શારીરિક રીતે સક્રિય રહો",
-      "પૂરતી ઊંઘ લો",
-    ],
-
-    benefitsTitle: "સારા પોષણના ફાયદા",
-    benefits: [
-      "મજબૂત રોગપ્રતિકારક શક્તિ",
-      "સ્વસ્થ વિકાસ",
-      "વધુ સારું શૈક્ષણિક પ્રદર્શન",
-      "વધુ ઊર્જા",
-      "આત્મવિશ્વાસમાં વધારો",
-      "વધુ સારું માસિક આરોગ્ય",
-    ],
-
-    pcosTitle: "PCOS / PCOD જાગૃતિ",
-    pcos: [
-      "અનિયમિત પીરિયડ્સ",
-      "ખીલ",
-      "વજનમાં ફેરફાર",
-      "વધારે વાળ વધવા",
-      "સંતુલિત આહાર",
-      "વ્યાયામ અને તણાવ નિયંત્રણ",
-    ],
-
-    rtiTitle: "RTI / STI જાગૃતિ",
-    rti: [
-      "અસામાન્ય સ્રાવ",
-      "ખંજવાળ અથવા ચળવળ",
-      "દર્દ અથવા અસુવિધા",
-      "વ્યક્તિગત સ્વચ્છતા રાખો",
-      "વહેલી તકે ડોક્ટરની સલાહ લો",
-    ],
-
-    cancerTitle: "કેન્સર જાગૃતિ",
-    cancer: [
-      "છોકરીઓ માટે સ્તન આરોગ્ય",
-      "ગાંઠ અથવા દુખાવો જણાય તો ડોક્ટરને કહો",
-      "સર્વિકલ આરોગ્ય",
-      "રસીકરણની સલાહ અનુસરો",
-      "પછીના જીવનમાં નિયમિત તપાસ જરૂરી છે",
-    ],
-
-    vouchersList: [
-      "50% છૂટ",
-      "30% છૂટ",
-      "10% છૂટ",
-      "₹200 છૂટ",
-      "₹500 છૂટ",
-      "₹1000 છૂટ",
-    ],
-
-    voucherSub: "હેલ્થ ચેકઅપ / ખરીદી પર",
-
-    terms: [
-      "ખરીદી નોન-રિટર્નેબલ છે.",
-      "માત્ર અધિકૃત Bata સ્ટોર / Stree Clinic માં માન્ય.",
-      "એક્સચેન્જ અથવા રિટર્ન માન્ય નથી.",
-      "વાઉચર જારી તારીખથી 6 મહિના માટે માન્ય છે.",
-      "ઓળખ ચકાસણી જરૂરી હોઈ શકે છે.",
-    ],
-  },
-
-  mr: {
-    home: "🏠 होम",
-    awareness: "🧑‍🏫 जागरूकता सत्र",
-    nutrition: "🥗 पोषण आणि आरोग्य",
-    women: "💎 महिलांचे आरोग्य",
-    wellbeing: "💙 आरोग्य व कल्याण",
-    vouchers: "🎁 गिफ्ट व्हाउचर",
-    clinics: "🏥 स्त्री क्लिनिक",
-    contact: "☎ संपर्क",
-
-    hero1: "मी आहे",
-    hero2: "स्त्री,",
-    hero3: "मी आहे",
-    hero4: "काबिल",
-    shine: "वाढण्याचा, शिकण्याचा आणि चमकण्याचा वेळ",
-    prepare: "मुलींना निरोगी प्रौढत्वासाठी तयार करणे",
-    age: "मुली — 10 ते 19 वर्षे",
-
-    awarenessTitle: "जागरूकता सत्र",
-    nutritionTitle: "पोषण आणि आरोग्यदायी अन्न",
-    nutritionSub: "चांगले पोषण तुम्हाला सक्रिय, लक्ष केंद्रित आणि मजबूत ठेवते.",
-    wellbeingTitle: "आरोग्य आणि कल्याण",
-    wellbeingSub: "योग्य माहितीमुळे सुरक्षित निवडी सुरू होतात.",
-    voucherTitle: "गिफ्ट व्हाउचर",
-    termsTitle: "नियम आणि अटी",
-    helpTitle: "मदत कुठे मिळेल",
-    helpText:
-      "किशोरवयीन मुलींना स्त्री क्लिनिक आणि मुलींसाठी अनुकूल आरोग्य केंद्रांमध्ये सुरक्षित, गोपनीय आणि मैत्रीपूर्ण आरोग्य सेवा मिळू शकतात.",
-    clinicTitle: "कोलकाता येथील स्त्री क्लिनिक",
-    footerWebsite: "🌐 www.parivarseva.org",
-    footerHelpline: "📞 हेल्पलाइन : 1800-123-7075",
-
-    topics: [
-      "पोषण आणि अॅनिमिया प्रतिबंध",
-      "स्वच्छ मासिक पाळी पद्धती",
-      "अॅनिमिया प्रतिबंध",
-      "HPV आणि इतर लसींची जागरूकता",
-      "स्तन आणि गर्भाशय मुख कर्करोग प्रतिबंध",
-    ],
-
-    duringTitle: "या वयात:",
-    during: [
-      "तुमचे शरीर वेगाने वाढते आणि बदलते",
-      "तुमचे विचार आणि भावना विकसित होतात",
-      "तुम्ही मैत्री आणि नाती निर्माण करता",
-      "तुम्ही स्वातंत्र्य आणि जबाबदारी शिकता",
-    ],
-
-    timeTitle: "हा वेळ आहे:",
-    time: [
-      "तुमची ताकद ओळखण्याचा",
-      "आत्मविश्वास वाढवण्याचा",
-      "आरोग्यदायी सवयी लावण्याचा",
-      "तुमचे भविष्य घडवण्याचा",
-      "आरोग्यासाठी काय चांगले व वाईट आहे ते समजण्याचा",
-    ],
-
-    balancedTitle: "संतुलित आहार घ्या",
-    balanced: [
-      "धान्य, डाळी आणि कडधान्ये",
-      "हिरव्या पालेभाज्या",
-      "ताजी फळे",
-      "दूध आणि दुग्धजन्य पदार्थ",
-      "अंडी, सुका मेवा आणि बिया",
-      "आवड असल्यास प्राणी प्रोटीन",
-    ],
-
-    habitsTitle: "आरोग्यदायी सवयी",
-    habits: [
-      "नाश्ता टाळू नका",
-      "नियमित वेळेत जेवण करा",
-      "दररोज 6–8 ग्लास पाणी प्या",
-      "जंक फूड कमी करा",
-      "शारीरिकदृष्ट्या सक्रिय रहा",
-      "पुरेशी झोप घ्या",
-    ],
-
-    benefitsTitle: "चांगल्या पोषणाचे फायदे",
-    benefits: [
-      "मजबूत रोगप्रतिकारक शक्ती",
-      "निरोगी वाढ",
-      "चांगली शैक्षणिक कामगिरी",
-      "अधिक ऊर्जा",
-      "आत्मविश्वासात वाढ",
-      "चांगले मासिक पाळी आरोग्य",
-    ],
-
-    pcosTitle: "PCOS / PCOD जागरूकता",
-    pcos: [
-      "अनियमित पाळी",
-      "मुरुम",
-      "वजनात बदल",
-      "जास्त केस वाढणे",
-      "संतुलित आहार",
-      "व्यायाम आणि ताण नियंत्रण",
-    ],
-
-    rtiTitle: "RTI / STI जागरूकता",
-    rti: [
-      "असामान्य स्त्राव",
-      "खाज किंवा जळजळ",
-      "दुखणे किंवा अस्वस्थता",
-      "स्वच्छता ठेवा",
-      "लवकर वैद्यकीय सल्ला घ्या",
-    ],
-
-    cancerTitle: "कर्करोग जागरूकता",
-    cancer: [
-      "मुलींसाठी स्तन आरोग्य",
-      "गाठ किंवा वेदना दिसल्यास डॉक्टरांना सांगा",
-      "गर्भाशय मुख आरोग्य",
-      "लसीकरण सल्ला पाळा",
-      "नंतरच्या आयुष्यात नियमित तपासणी महत्त्वाची",
-    ],
-
-    vouchersList: [
-      "50% सूट",
-      "30% सूट",
-      "10% सूट",
-      "₹200 सूट",
-      "₹500 सूट",
-      "₹1000 सूट",
-    ],
-
-    voucherSub: "हेल्थ चेकअप / खरेदीवर",
-
-    terms: [
-      "खरेदी नॉन-रिटर्नेबल आहे.",
-      "फक्त अधिकृत Bata स्टोअर / Stree Clinic मध्ये वैध.",
-      "एक्सचेंज किंवा रिटर्न मान्य नाही.",
-      "व्हाउचर जारी तारखेपासून 6 महिन्यांसाठी वैध आहे.",
-      "ओळख पडताळणी आवश्यक असू शकते.",
-    ],
-  },
+  langName: "ગુજરાતી",
+  nav: ["હોમ", "જાગૃતિ", "આરોગ્ય", "વાઉચર", "મદદ"],
+  heroTitle: "બાટા કિશોરી સ્વાસ્થ્ય",
+  heroSub: "યુવા છોકરીઓને સ્વસ્થ બદલાવ માટે તૈયાર કરવું",
+  heroText:
+    "આ પહેલ કિશોરીઓના આરોગ્ય, આત્મવિશ્વાસ, પોષણ, સ્વચ્છતા, એનિમિયા નિવારણ, રસી જાગૃતિ અને કેન્સરના પ્રારંભિક નિવારણ પર કેન્દ્રિત છે.",
+  cta: "પ્રોગ્રામ જુઓ",
+  ageTitle: "યુવા છોકરીઓ — 10 થી 19 વર્ષ",
+  ageText:
+    "કિશોરાવસ્થા જીવનનો ખાસ, ઉત્સાહજનક અને ક્યારેક પડકારજનક સમય છે. આ ઝડપી વૃદ્ધિ, શીખવા અને નવી તકોનો સમય છે.",
+  duringAge: "આ ઉંમરમાં",
+  duringPoints: [
+    "શરીર ઝડપથી વધે છે અને બદલાય છે",
+    "વિચારો અને ભાવનાઓ વિકસે છે",
+    "મિત્રતા અને સંબંધો બને છે",
+    "સ્વતંત્રતા અને જવાબદારી શીખાય છે",
+  ],
+  timeTitle: "આ સમય છે",
+  timePoints: [
+    "તમારી શક્તિઓ ઓળખવાનો",
+    "આત્મવિશ્વાસ વધારવાનો",
+    "સ્વસ્થ આદતો બનાવવાનો",
+    "તમારું ભવિષ્ય ઘડવાનો",
+    "આરોગ્ય માટે શું સારું અને ખરાબ છે તે સમજવાનો",
+  ],
+  awarenessTitle: "જાગૃતિ સત્રો",
+  awarenessCards: [
+    {
+      title: "પોષણ અને આરોગ્યદાયક ખોરાક",
+      img: ASSETS.nutrition,
+      desc: "સારું પોષણ તમને સક્રિય, કેન્દ્રિત અને મજબૂત રાખે છે.",
+      points: [
+        "અનાજ, દાળ અને કઠોળ ખાઓ",
+        "લીલા શાકભાજી અને તાજા ફળો લો",
+        "દરરોજ 6–8 ગ્લાસ સ્વચ્છ પાણી પીવો",
+        "જંક ફૂડ અને મીઠાં પીણાં ટાળો",
+        "પૂરતી ઊંઘ લો",
+      ],
+    },
+    {
+      title: "એનિમિયા નિવારણ",
+      img: ASSETS.anemia,
+      desc: "એનિમિયા શરીરમાં આયર્નની ઉણપને કારણે થાય છે.",
+      points: [
+        "નબળાઈ અને થાક તેના લક્ષણો હોઈ શકે છે",
+        "લીલા શાકભાજી, ગોળ અને ખજૂર ખાઓ",
+        "Vitamin-C ધરાવતો ખોરાક લો",
+        "ડોક્ટરની સલાહથી જ સપ્લિમેન્ટ લો",
+      ],
+    },
+    {
+      title: "સ્વચ્છતા અને માસિક આરોગ્ય",
+      img: ASSETS.hygiene,
+      desc: "માસિક ધર્મ કુદરતી અને સ્વસ્થ પ્રક્રિયા છે. તે બીમારી નથી.",
+      points: [
+        "સ્વચ્છ sanitary products વાપરો",
+        "દર 4–6 કલાકે બદલો",
+        "હાથ સારી રીતે ધોવો",
+        "વપરાયેલા products સુરક્ષિત રીતે ફેંકો",
+        "છોકરીઓ અભ્યાસ અને રમત ચાલુ રાખી શકે છે",
+      ],
+    },
+    {
+      title: "HPV અને રસી જાગૃતિ",
+      img: ASSETS.vaccine,
+      desc: "રસી અને યોગ્ય સલાહ લાંબા સમય સુધી આરોગ્ય સુરક્ષા આપે છે.",
+      points: [
+        "મેડિકલ સલાહનું પાલન કરો",
+        "રસીના લાભો સમજો",
+        "વિશ્વાસપાત્ર આરોગ્ય કર્મચારી સાથે વાત કરો",
+        "નિવારણને ગંભીરતાથી લો",
+      ],
+    },
+  ],
+  healthTitle: "આરોગ્ય અને સુખાકારી",
+  healthText:
+    "તમારા શરીરને સમજવાથી સુરક્ષિત અને જવાબદાર નિર્ણય લેવામાં મદદ મળે છે.",
+  healthCards: [
+    "શરીરમાં થતા ફેરફારોની માહિતી",
+    "સન્માનપૂર્ણ અને સ્વસ્થ સંબંધો",
+    "સંક્રમણ વિશે જાગૃતિ",
+    "સારી વ્યક્તિગત સ્વચ્છતા",
+    "PCOS / PCOD જાગૃતિ",
+    "બ્રેસ્ટ અને સર્વિકલ કેન્સર જાગૃતિ",
+  ],
+  vouchersTitle: "બાટા સ્ત્રી કિશોરી સ્વાસ્થ્ય વાઉચર",
+  vouchers: [
+    "Stree Clinic માં હેલ્થ ચેકઅપ પર 50% છૂટ",
+    "Stree Clinic માં હેલ્થ ચેકઅપ પર 30% છૂટ",
+    "Stree Clinic માં હેલ્થ ચેકઅપ પર 10% છૂટ",
+    "₹1000 થી વધુ ખરીદી પર ₹200 છૂટ",
+    "₹1500 થી વધુ ખરીદી પર ₹500 છૂટ",
+    "₹3000 થી વધુ ખરીદી પર ₹1000 છૂટ",
+  ],
+  termsTitle: "વાઉચર નિયમો અને શરતો",
+  terms: [
+    "વાઉચરથી ખરીદેલી વસ્તુઓ non-returnable અને non-refundable છે.",
+    "વાઉચર માત્ર authorized Bata retail store અથવા Stree Clinic પર માન્ય છે.",
+    "ખરીદી પૂર્ણ થયા પછી exchange અથવા return નહીં થાય.",
+    "વાઉચર issue date થી 6 મહિના માટે માન્ય છે.",
+    "વાઉચર transfer કરી શકાતું નથી.",
+  ],
+  helpTitle: "મદદ ક્યાંથી લેવી",
+  helpText:
+    "કિશોરીઓ Stree Clinic અને young-girls-friendly health clinics માં સુરક્ષિત અને ગુપ્ત આરોગ્ય સેવાઓ લઈ શકે છે.",
+  clinics: [
+    "બારાસાત — Barrackpore Road",
+    "બેહાલા — Diamond Harbour Road",
+    "ગરિયાહાટ — Gariahat Road",
+    "હાટીબાગાન — Arabindo Sarani",
+    "ટોલીગંજ — NSC Bose Road",
+  ],
+  footer: "હું છું સ્ત્રી, હું છું કાબિલ",
+},
+bn: {
+  langName: "বাংলা",
+  nav: ["হোম", "সচেতনতা", "স্বাস্থ্য", "ভাউচার", "সাহায্য"],
+  heroTitle: "বাটা কিশোরী স্বাস্থ্য",
+  heroSub: "তরুণীদের সুস্থ পরিবর্তনের জন্য প্রস্তুত করা",
+  heroText:
+    "এই উদ্যোগটি কিশোরীদের স্বাস্থ্য, আত্মবিশ্বাস, পুষ্টি, পরিচ্ছন্নতা, অ্যানিমিয়া প্রতিরোধ, টিকা সচেতনতা এবং ক্যান্সারের প্রাথমিক প্রতিরোধের উপর কেন্দ্রিত।",
+  cta: "প্রোগ্রাম দেখুন",
+  ageTitle: "তরুণী মেয়েরা — ১০ থেকে ১৯ বছর",
+  ageText:
+    "কৈশোর জীবনের একটি বিশেষ, উত্তেজনাপূর্ণ এবং কখনও কখনও চ্যালেঞ্জিং সময়। এটি দ্রুত বৃদ্ধি, শেখা এবং নতুন সুযোগের সময়।",
+  duringAge: "এই বয়সে",
+  duringPoints: [
+    "শরীর দ্রুত বাড়ে এবং পরিবর্তিত হয়",
+    "চিন্তা ও আবেগের বিকাশ হয়",
+    "বন্ধুত্ব ও সম্পর্ক তৈরি হয়",
+    "স্বাধীনতা ও দায়িত্ব শেখা হয়",
+  ],
+  timeTitle: "এই সময়টি হলো",
+  timePoints: [
+    "নিজের শক্তি চিনে নেওয়ার",
+    "আত্মবিশ্বাস বাড়ানোর",
+    "স্বাস্থ্যকর অভ্যাস গড়ে তোলার",
+    "নিজের ভবিষ্যৎ গড়ার",
+    "স্বাস্থ্যের জন্য ভালো-মন্দ বোঝার",
+  ],
+  awarenessTitle: "সচেতনতা সেশন",
+  awarenessCards: [
+    {
+      title: "পুষ্টি ও স্বাস্থ্যকর খাবার",
+      img: ASSETS.nutrition,
+      desc: "ভালো পুষ্টি আপনাকে সক্রিয়, মনোযোগী এবং শক্তিশালী রাখে।",
+      points: [
+        "শস্য, ডাল এবং ডালজাতীয় খাবার খান",
+        "সবুজ শাকসবজি এবং তাজা ফল খান",
+        "প্রতিদিন ৬–৮ গ্লাস পরিষ্কার জল পান করুন",
+        "জাঙ্ক ফুড এবং মিষ্টি পানীয় এড়িয়ে চলুন",
+        "পর্যাপ্ত ঘুম নিন",
+      ],
+    },
+    {
+      title: "অ্যানিমিয়া প্রতিরোধ",
+      img: ASSETS.anemia,
+      desc: "শরীরে আয়রনের ঘাটতির কারণে অ্যানিমিয়া হয়।",
+      points: [
+        "দুর্বলতা ও ক্লান্তি এর লক্ষণ হতে পারে",
+        "সবুজ শাকসবজি, গুড় এবং খেজুর খান",
+        "Vitamin-C সমৃদ্ধ খাবার খান",
+        "ডাক্তারের পরামর্শ ছাড়া supplement নেবেন না",
+      ],
+    },
+    {
+      title: "পরিচ্ছন্নতা ও মাসিক স্বাস্থ্য",
+      img: ASSETS.hygiene,
+      desc: "মাসিক একটি স্বাভাবিক ও স্বাস্থ্যকর প্রক্রিয়া। এটি কোনো রোগ নয়।",
+      points: [
+        "পরিষ্কার sanitary products ব্যবহার করুন",
+        "প্রতি ৪–৬ ঘণ্টায় পরিবর্তন করুন",
+        "হাত ভালোভাবে ধুয়ে নিন",
+        "ব্যবহৃত products নিরাপদে ফেলুন",
+        "মেয়েরা পড়াশোনা ও খেলাধুলা চালিয়ে যেতে পারে",
+      ],
+    },
+    {
+      title: "HPV ও টিকা সচেতনতা",
+      img: ASSETS.vaccine,
+      desc: "টিকা এবং সঠিক পরামর্শ দীর্ঘমেয়াদি স্বাস্থ্য সুরক্ষা দেয়।",
+      points: [
+        "চিকিৎসকের পরামর্শ মেনে চলুন",
+        "টিকার উপকারিতা বুঝুন",
+        "বিশ্বস্ত স্বাস্থ্যকর্মীর সঙ্গে কথা বলুন",
+        "প্রতিরোধকে গুরুত্ব দিন",
+      ],
+    },
+  ],
+  healthTitle: "স্বাস্থ্য ও সুস্থতা",
+  healthText:
+    "নিজের শরীরকে বোঝা নিরাপদ এবং দায়িত্বশীল সিদ্ধান্ত নিতে সাহায্য করে।",
+  healthCards: [
+    "শরীরের পরিবর্তন সম্পর্কে সচেতনতা",
+    "সম্মানজনক ও স্বাস্থ্যকর সম্পর্ক",
+    "সংক্রমণ সম্পর্কে সচেতনতা",
+    "ভালো ব্যক্তিগত পরিচ্ছন্নতা",
+    "PCOS / PCOD সচেতনতা",
+    "স্তন ও সার্ভিক্যাল ক্যান্সার সচেতনতা",
+  ],
+  vouchersTitle: "বাটা স্ত্রী কিশোরী স্বাস্থ্য ভাউচার",
+  vouchers: [
+    "Stree Clinic-এ health checkup-এ ৫০% ছাড়",
+    "Stree Clinic-এ health checkup-এ ৩০% ছাড়",
+    "Stree Clinic-এ health checkup-এ ১০% ছাড়",
+    "₹1000-এর বেশি কেনাকাটায় ₹200 ছাড়",
+    "₹1500-এর বেশি কেনাকাটায় ₹500 ছাড়",
+    "₹3000-এর বেশি কেনাকাটায় ₹1000 ছাড়",
+  ],
+  termsTitle: "ভাউচারের নিয়ম ও শর্তাবলী",
+  terms: [
+    "ভাউচার দিয়ে কেনা জিনিস non-returnable এবং non-refundable।",
+    "ভাউচার শুধুমাত্র authorized Bata retail store বা Stree Clinic-এ বৈধ।",
+    "কেনাকাটা সম্পূর্ণ হলে exchange বা return করা যাবে না।",
+    "ভাউচার issue date থেকে ৬ মাস পর্যন্ত বৈধ।",
+    "ভাউচার transfer করা যাবে না।",
+  ],
+  helpTitle: "কোথায় সাহায্য পাবেন",
+  helpText:
+    "কিশোরীরা Stree Clinic এবং young-girls-friendly health clinics থেকে নিরাপদ ও গোপনীয় স্বাস্থ্যসেবা পেতে পারে।",
+  clinics: [
+    "বারাসাত — Barrackpore Road",
+    "বেহালা — Diamond Harbour Road",
+    "গড়িয়াহাট — Gariahat Road",
+    "হাতিবাগান — Arabindo Sarani",
+    "টালিগঞ্জ — NSC Bose Road",
+  ],
+  footer: "আমি নারী, আমি সক্ষম",
+},
 };
 
-export default function App() {
-  const [lang, setLang] = React.useState("en");
-  const t = translations[lang];
+function App() {
+  const [lang, setLang] = useState("en");
+  const t = content[lang];
 
   return (
-    <div className="page">
-      <header className="topHeader">
-        <div className="bataLogo">
-          <div className="shoeMark">👟</div>
-          <div>
-            <h1>Bata</h1>
-            <p>WOMEN'S PROGRAM</p>
-            <small>Giving women a step ahead</small>
-          </div>
+    <div className="app">
+      <div className="float-circle circle-one"></div>
+      <div className="float-circle circle-two"></div>
+      <div className="float-circle circle-three"></div>
+
+      <header className="navbar">
+        <div className="brand">
+          <img src={ASSETS.bataLogo} alt="Bata" />
+          {/* <span>Kishori Swasthya</span> */}
         </div>
 
-        <div className="partnerLogos">
-          <div className="miniLogo">
-            PARIVAR
-            <br />
-            SEVA
-          </div>
-          <div className="streeLogo">
-            Stree
-            <br />
-            <span>+ CLINIC</span>
-          </div>
-          <p>
-            A Unit of Parivar Seva Sanstha
-            <br />
-            <b>for Women of all Ages</b>
-          </p>
-        </div>
+        <nav>
+          {t.nav.map((item) => (
+            <a key={item} href={`#${item}`}>
+              {item}
+            </a>
+          ))}
+        </nav>
 
-        <div className="languageBox">
-          <label>Language / भाषा / ભાષા / भाषा</label>
-          <select value={lang} onChange={(e) => setLang(e.target.value)}>
-            <option value="en">English</option>
-            <option value="hi">Hindi</option>
-            <option value="gu">Gujarati</option>
-            <option value="mr">Marathi</option>
-          </select>
+        <div className="language-box">
+          <button
+            className={lang === "en" ? "active" : ""}
+            onClick={() => setLang("en")}
+          >
+            EN
+          </button>
+          <button
+            className={lang === "hi" ? "active" : ""}
+            onClick={() => setLang("hi")}
+          >
+            HI
+          </button>
+          <button
+            className={lang === "gu" ? "active" : ""}
+            onClick={() => setLang("gu")}
+          >
+            GU
+          </button>
+          <button
+  className={lang === "bn" ? "active" : ""}
+  onClick={() => setLang("bn")}
+>
+  BN
+</button>
         </div>
       </header>
 
-      <nav className="nav">
-        {[
-          t.home,
-          t.awareness,
-          t.nutrition,
-          t.women,
-          t.wellbeing,
-          t.vouchers,
-          t.clinics,
-          t.contact,
-        ].map((item) => (
-          <a key={item}>{item}</a>
-        ))}
-      </nav>
-
-      <section className="hero">
-        <div className="floatingBubble bubble1"></div>
-        <div className="floatingBubble bubble2"></div>
-        <div className="floatingBubble bubble3"></div>
-
-        <div className="heroText">
-          <h2>
-            {t.hero1} <span>{t.hero2}</span>
-            <br />
-            {t.hero3} <b>{t.hero4}</b>
-          </h2>
-          <p>{t.shine}</p>
-          <div className="pill pink">{t.prepare}</div>
-          <div className="pill blue">{t.age}</div>
-        </div>
-
-        <img src={img.hero} alt="young girls" />
-      </section>
-
-      <section className="awareness">
-        <h2 className="title">{t.awarenessTitle}</h2>
-
-        <div className="topicGrid">
-          {t.topics.map((title, index) => {
-            const photos = [
-              img.nutrition,
-              img.pad,
-              img.blood,
-              img.vaccine,
-              img.cancer,
-            ];
-            const icons = ["🥗", "🌸", "🩸", "💉", "🎗️"];
-
-            return (
-              <div className="topicCard" key={title}>
-                <div className="topicIcon">{icons[index]}</div>
-                <img src={photos[index]} alt={title} />
-                <h3>{title}</h3>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="ageGrid">
-          <img src={img.sports} alt="sports" />
-
-          <div className="softCard green">
-            <h3>{t.duringTitle}</h3>
-            <ul>
-              {t.during.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+      <section className="hero" id={t.nav[0]}>
+        <div className="hero-content">
+          <div className="logo-strip">
+            <img src={ASSETS.bataLogo} alt="Bata" />
+            <img src={ASSETS.parivarLogo} alt="Parivar Seva" />
+            <img src={ASSETS.streeLogo} alt="Stree Clinic" />
           </div>
 
-          <div className="softCard pink">
+          <p className="eyebrow">Bata Children’s Program • CSR Initiative</p>
+          {/* <h1>{t.heroTitle}</h1> */}
+          <h1 className="hero-title">
+  {/* <img src={ASSETS.bataLogo} alt="Bata" className="hero-bata-logo" /> */}
+  <img src={ASSETS.bataHeroLogo} alt="Bata" className="hero-bata-logo" />
+  <span>{t.heroTitle.replace("Bata ", "")}</span>
+</h1>
+<img src="/assets/keep-her-smiling.png" alt="tagline" className="tagline-img" />
+{/* <h2>{t.heroSub}</h2> */}
+{/* <p>{t.heroText}</p> */}
+          <h2>{t.heroSub}</h2>
+          <p>{t.heroText}</p>
+
+          <div className="hero-actions">
+            <a href="#awareness" className="primary-btn">
+              {t.cta}
+            </a>
+            <span className="helpline">Helpline: 1800-123-7075</span>
+          </div>
+        </div>
+
+        <div className="hero-visual">
+          <img src={ASSETS.heroGirl} alt="Young girl health awareness" />
+          <div className="badge-card">
+            <strong>10–19</strong>
+            <span>Years</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="age-section">
+        <h2>{t.ageTitle}</h2>
+        <p>{t.ageText}</p>
+
+        <div className="age-grid">
+          <div className="info-card green">
+            <h3>{t.duringAge}</h3>
+            {t.duringPoints.map((p) => (
+              <p key={p}>✦ {p}</p>
+            ))}
+          </div>
+
+          <div className="info-card pink">
             <h3>{t.timeTitle}</h3>
-            <ul>
-              {t.time.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+            {t.timePoints.map((p) => (
+              <p key={p}>✦ {p}</p>
+            ))}
           </div>
-
-          <img src={img.study} alt="study" />
         </div>
       </section>
 
-      <main className="mainGrid">
-        <section className="leftCol">
-          <h2 className="blueTitle">{t.nutritionTitle}</h2>
-          <p>{t.nutritionSub}</p>
+      <section className="awareness" id="awareness">
+        <div className="section-heading">
+          <p>Learn • Grow • Shine</p>
+          <h2>{t.awarenessTitle}</h2>
+        </div>
 
-          <div className="cards3">
-            <InfoCard title={t.balancedTitle} img={img.nutrition} items={t.balanced} />
-            <InfoCard title={t.habitsTitle} img={img.doctor} items={t.habits} />
-            <InfoCard title={t.benefitsTitle} img={img.sports} items={t.benefits} />
-          </div>
+        <div className="cards-grid">
+          {t.awarenessCards.map((card) => (
+            <article className="awareness-card" key={card.title}>
+              <img src={card.img} alt={card.title} />
+              <div>
+                <h3>{card.title}</h3>
+                <p>{card.desc}</p>
+                <ul>
+                  {card.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
-          <h2 className="blueTitle">{t.wellbeingTitle}</h2>
-          <p>{t.wellbeingSub}</p>
+      <section className="health-section">
+        <div className="health-text">
+          <p>Safe Choices • Better Future</p>
+          <h2>{t.healthTitle}</h2>
+          <span>{t.healthText}</span>
+        </div>
 
-          <div className="healthGrid">
-            <InfoCard title={t.pcosTitle} img={img.doctor} items={t.pcos} />
-            <InfoCard title={t.rtiTitle} img={img.clinic} items={t.rti} />
-            <InfoCard title={t.cancerTitle} img={img.cancer} items={t.cancer} />
-          </div>
-        </section>
-
-        <aside className="rightCol">
-          <section className="voucherBox">
-            <h2>
-              <span>Bata</span> KISHORI SWASTHYA
-            </h2>
-            <h3>{t.voucherTitle} 🎁</h3>
-
-            <div className="voucherGrid">
-              {t.vouchersList.map((v) => (
-                <div className="voucher" key={v}>
-                  <strong>{v}</strong>
-                  <p>{t.voucherSub}</p>
-                </div>
-              ))}
+        <div className="health-grid">
+          {t.healthCards.map((item, index) => (
+            <div className="health-pill" key={item}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              {item}
             </div>
+          ))}
+        </div>
+      </section>
 
-            <div className="terms">
-              <h4>{t.termsTitle}</h4>
-              <ul>
-                {t.terms.map((term) => (
-                  <li key={term}>{term}</li>
-                ))}
-              </ul>
+      <section className="sports-banner">
+        <img src={ASSETS.sports1} alt="sports" />
+        <img src={ASSETS.sports2} alt="sports" />
+        <img src={ASSETS.sports3} alt="sports" />
+      </section>
+        
+
+
+        
+      <section className="voucher-section">
+        <div className="section-heading">
+          <p>Bata • Stree Clinic</p>
+          <h2>{t.vouchersTitle}</h2>
+        </div>
+
+        <div className="voucher-grid">
+          {t.vouchers.map((v, index) => (
+            <div className="voucher-card" key={v}>
+              <span>Voucher {index + 1}</span>
+              <h3>{v}</h3>
+              <p>Valid with authorised signature and beneficiary verification.</p>
             </div>
-          </section>
-        </aside>
-      </main>
+          ))}
+        </div>
 
-      <section className="clinicSection">
-        <div className="helpCard">
+        <div className="terms-card">
+          <h3>{t.termsTitle}</h3>
+          <ol>
+            {t.terms.map((term) => (
+              <li key={term}>{term}</li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="help-section">
+        <div>
+          <p className="eyebrow">Confidential • Friendly • Safe</p>
           <h2>{t.helpTitle}</h2>
           <p>{t.helpText}</p>
-          <img src={img.doctor} alt="doctor" />
-        </div>
 
-        <div className="mapCard">
-          <h2>{t.clinicTitle}</h2>
-          <img src={img.map} alt="map" />
-          <ul>
-            <li>📍 BARASAT — Barrackpore Road — +91-7703-9502-84</li>
-            <li>📍 BEHALA — 39, Diamond Harbour Road — +91-7703-9503-11</li>
-            <li>📍 GARIAHAT — 48, Gariahat Road — +91-7703-9502-94</li>
-            <li>📍 HATIBAGAN — 100, Arabindo Sarani — +91-7703-9502-93</li>
-            <li>📍 TOLLYGUNGE — 284 NSC Bose Road — +91-7703-9503-52</li>
-          </ul>
-        </div>
-
-        <div className="streePanel">
-          <div className="bigStree">
-            Stree
-            <br />
-            <span>+ CLINIC</span>
-          </div>
-          <p>A Unit of Parivar Seva Sanstha</p>
-          <h3>for Women of all Ages</h3>
-          <h2>www.streeclinic.com</h2>
-          <p>Stay Connected on: Facebook | X | Instagram | YouTube</p>
-          <div className="stats">
-            <b>30</b> Stree Clinics in <b>11</b> States & <b>15</b> Key Cities of
-            India
+          <div className="clinic-list">
+            {t.clinics.map((clinic) => (
+              <span key={clinic}>📍 {clinic}</span>
+            ))}
           </div>
         </div>
+
+        <img src={ASSETS.clinic} alt="Stree clinic" />
       </section>
 
       <footer>
-        <div>{t.footerWebsite}</div>
-        <div>{t.footerHelpline}</div>
+        <h2>{t.footer}</h2>
+        <p>www.parivarseva.org • www.streeclinic.com</p>
+        <p>Stay Connected: Facebook | X | Instagram | YouTube</p>
       </footer>
     </div>
   );
 }
 
-function InfoCard({ title, img, items }) {
-  return (
-    <div className="infoCard">
-      <img src={img} alt={title} />
-      <h3>{title}</h3>
-      <ul>
-        {items.map((i) => (
-          <li key={i}>{i}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+export default App;
