@@ -750,7 +750,7 @@ footer p {
 .hero-title span {
   font-size: 64px;
   font-weight: 800;
-  color: #e91e63;
+  /* color: #1e43e9; */
   line-height: 1.1;
 }
 .hero-bata-logo {
@@ -762,4 +762,43 @@ footer p {
   height: 60px;
   margin: 10px 0 20px;
   object-fit: contain;
+      /* font-family: 'bradley hand ITC TT';
+    font-weight: 700; */
+
+}
+/* .hero-title span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+} */
+
+.kishori-text {
+  color: #2447f4;
+  font-weight: 100;
+  
+  
+}
+
+.swasthya-text {
+  color: #5ecbff;
+  font-weight: 100;
+  margin-left: 10px;
+}
+.voucher-bata-logo {
+  height: 90px;
+  object-fit: contain;
+  margin-top: 8px;
+}
+.tagline-text {
+  display: inline-block;
+  background: #e73ea1; /* orange */
+  
+  padding: 10px 20px;
+  border-radius: 20px;
+
+  font-family: "Patrick Hand", cursive; /* handwritten look */
+  font-size: 30px;
+
+  letter-spacing: 1px;
+  color: white;
 }
